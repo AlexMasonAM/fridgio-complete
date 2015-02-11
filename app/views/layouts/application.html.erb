@@ -7,14 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app='fridgioApp'>
-
-<% if current_user %>
-  <%= link_to "Logout", logout_path, method: :delete %>
-<% else %>
-  <%= link_to "Login", login_path %> or <%= link_to "Signup", new_user_path %>
-<% end %>
-
-<%= yield %>
+  <a ui-sref="home">HOME</a>
+  <a ui-sref="about">ABOUT</a>
+  <a ui-sref="allfood">FOOD</a>
+  <%= yield %>
 
 </body>
 </html>

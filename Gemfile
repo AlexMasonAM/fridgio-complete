@@ -44,3 +44,5 @@ gem 'bitters'
 
 # Angular Rails!
 gem 'angularjs-rails'
+
+gem 'angular-rails-templates'

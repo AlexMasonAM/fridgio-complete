@@ -1,0 +1,22 @@
+<div ng-controller='foodController'>
+  <h1>Food In Your Fridge</h1>
+
+  Search by name: <input type='text' ng-model='s.name'>
+  Search by type: <input type='text' ng-model='s.food_type'>
+
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Expiration</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat='food in foods | filter:s'>
+        <td><a ui-sref="showfood({ id: food.id })">{{ food.name }}</a></td>
+        <td>{{ food.food_type }}</td>
+        <td>{{ food.expiration | date:short }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
